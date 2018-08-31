@@ -22,6 +22,10 @@ body, html{
   background-attachment:fixed;
 }
 
+#org1 {
+background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480fe1a/t/56a19ab71a5203cff0c1fe29/1534307982804/?format=1500w');
+}
+
 .pimg1{
   background-image:url('../img/hongkong.jpg');
   min-height:100%;
@@ -71,10 +75,19 @@ body, html{
 }
 
 .desc  {
-  
+
 }
 
-
+.titlePic{
+  text-transform:uppercase;
+  padding-top: 5vh;
+  /* position:absolute; */
+  width:100%;
+  text-align:center;
+  color:#000;
+  font-size:27px;
+  letter-spacing:8px;
+}
 .text{
   padding-top: 5vh;
   /* position:absolute; */
@@ -100,6 +113,8 @@ body, html{
   letter-spacing:8px;
 }
 
+
+
 .ptext .border{
   background-color:#111;
   color:#fff;
@@ -113,6 +128,11 @@ body, html{
 }
 
 .ptext .border.trans{
+  background-color:transparent;
+}
+
+.ptext .border.move{
+  position:relative;
   background-color:transparent;
 }
 
@@ -130,6 +150,14 @@ body, html{
   margin-top: 5vh;
   margin-bottom: 2vh;
 }
+
+.orgCardHolder {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+  margin-bottom: 2vh;
+}
+
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -139,10 +167,59 @@ body, html{
     margin-right: 2.5vw;
 }
 
+
+.akpCard {
+    /* Add shadows to create the "card" effect */
+    background-color: rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    transition: 0.3s;
+    width: 329.17px;
+    height: 125px;
+    /* border-radius: 50%; */
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+}
+
+.akpCard > img {
+  height: inherit;
+  width: inherit;
+}
+
+/* On mouse-over, add a deeper shadow */
+.akpCard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.lxaCard {
+    /* Add shadows to create the "card" effect */
+    background-color: rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    transition: 0.3s;
+    width: 318.03px;
+    height: 125px;
+    /* border-radius: 50%; */
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+}
+
+.lxaCard > img {
+  height: inherit;
+  width: inherit;
+}
+
+/* On mouse-over, add a deeper shadow */
+.lxaCard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
 /* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+
+
 
 /* Add some padding inside the card container */
 .container {
