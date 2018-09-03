@@ -1,4 +1,4 @@
-body, html{
+body, html {
   height:100%;
   margin:0;
   font-size:16px;
@@ -9,8 +9,10 @@ body, html{
 }
 
 .pimg1, .pimg2, .pimg3{
+  z-index: 0;
   position:relative;
   opacity: 0.7;
+  /* background: rgba(0,0,0,0.7); */
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
@@ -27,9 +29,15 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
 }
 
 .pimg1{
+  /* background: rgba(0, 0, 0, 0.7); */
   background-image:url('../img/hongkong.jpg');
+  /* background-color: rgba(0,0,0,0.7); */
   min-height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 
 .pimg2{
   background-image:url('../img/image2.jpg');
@@ -39,6 +47,38 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
 .pimg3{
   background-image:url('../img/image3.jpg');
   min-height:400px;
+}
+
+.portrait {
+  z-index: 1;
+    /* Add shadows to create the "card" effect */
+    background-color: rgba(0, 0, 0, 1.0);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+    transition: 0.3s;
+    width:350px;
+    height: 350px;
+    border-radius: 50%;
+    margin: 30px;
+}
+
+
+.portrait > img {
+
+    z-index: 1;
+  /* display: block; */
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+}
+
+.portrait:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.portraitSection {
+    z-index: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .section{
@@ -57,9 +97,11 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
 }
 
 .ptext{
-  position:absolute;
-  top:50%;
-  width:100%;
+  /* position:absolute; */
+  /* top:50%;
+  width:100%; */
+  /* background-color: rgba(0, 0, , 0.7); */
+  align-content: center;
   text-align:center;
   color:#000;
   font-size:27px;
@@ -74,9 +116,7 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
     /* letter-spacing:5px; */
 }
 
-.desc  {
 
-}
 
 .titlePic{
   text-transform:uppercase;
@@ -100,13 +140,14 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
 
 .opaqueBackground{
   background-color: rgba(255, 255, 255, 0.3);
+  z-index: -1;
 }
 
 .textFloat{
   /* padding-top:25vh; */
-  position:absolute;
-  top:40%;
-  width:100%;
+  /* position:absolute; */
+  /* top:40%;
+  width:100%; */
   text-align:center;
   color:#000;
   font-size:16px;
@@ -119,12 +160,17 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
   background-color:#111;
   color:#fff;
   padding:20px;
+  margin: 20px;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  /* background-color: rgba(6.7, 6.7, 6.7, 0.7); */
 }
 
 .border2{
   background-color:#111;
   color:#fff;
   padding:10px;
+  margin: 20px;
+  /* background-color: rgba(6.7, 6.7, 6.7, 0.7); */
 }
 
 .ptext .border.trans{
@@ -151,7 +197,7 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
   margin-bottom: 2vh;
 }
 
-.orgCardHolder {
+.orgcontainer {
   display: flex;
   justify-content: center;
   margin-top: 10vh;
@@ -188,7 +234,8 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
 
 /* On mouse-over, add a deeper shadow */
 .akpCard:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background-color: rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
 }
 
 .lxaCard {
@@ -211,7 +258,8 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
 
 /* On mouse-over, add a deeper shadow */
 .lxaCard:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background-color: rgba(0, 0, 0, 0.5);s
+  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -225,4 +273,9 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
 .container {
     padding: 2px 16px;
     width: 20vw;
+}
+
+.pwrap{
+  margin-left: 10px;
+  margin-right:10px;
 }
