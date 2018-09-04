@@ -8,18 +8,46 @@
   <title>Sean Derman</title>
   <link rel="stylesheet" href="css/style.css">
   <!-- Latest compiled and minified CSS -->
+  <script src="/js/jquery.min.js"></script>
+  <script src="jquery.combinedScroll.js"></script>
+  <script type="text/javascript">
+  jQuery(document).ready(function($) {
+// Scroll to the desired section on click
+// Make sure to add the `data-scroll` attribute to your `<a>`          tag.
+// Example:
+// `<a data-scroll href="#my-section">My Section</a>` will scroll to an element with the id of 'my-section'.
+function scrollToSection(event) {
+  event.preventDefault();
+  var $section = $($(this).attr('href'));
+  $('html, body').animate({
+    scrollTop: $section.offset().top
+  }, 500);
+}
+$('[data-scroll]').on('click', scrollToSection);
+}(jQuery));
+
+  </script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
   integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <ul>
+    <li><a href="#connect" >CONNECT</a></li>
+    <li><a href="#projects">PROJECTS</a></li>
+    <li><a href="#about">ABOUT</a></li>
+  </ul>
+
 </head>
 <body>
 
-  <div class="pimg1">
-<section class="portraitSection">
-  <div class="portrait">
-    <img src="img/portrait.jpg">
+<div class="portraitWrapper">
+  <section class="portraitSection">
+    <div class="portrait">
+      <img src="img/portrait.jpg">
+    </div>
+  </section>
   </div>
-</section>
-
+  
+  <div class="pimg1">
 
     <div class="ptext">
       <span class="border">
@@ -38,7 +66,7 @@
 
     </div>
 
-  <section class="section section-light">
+  <section id="about" class="section section-light">
     <h1 class="title">I am a...</h1>
     <div class="cardHolder">
 
@@ -68,16 +96,20 @@
         </span>
       </div>
       <div class="orgcontainer">
-        <div class="akpCard">
-            <img src="http://static1.squarespace.com/static/566c37f2a976afcb5480fe1a/t/56a19ab71a5203cff0c1fe29/1534307982804/?format=1500w">
-        </div>
+        <a href="http://akpsiucla.com">
+          <div class="akpCard">
+              <img src="http://static1.squarespace.com/static/566c37f2a976afcb5480fe1a/t/56a19ab71a5203cff0c1fe29/1534307982804/?format=1500w">
+          </div>
+        </a>
+        <a href="https://www.bruinslca.com/home/">
         <div class="lxaCard">
             <img src="img/lxa.png">
         </div>
+        </a>
       </div>
   </div>
 
-  <section class="section section-dark">
+  <section id="projects" class="section section-dark">
     <h2>Section Two</h2>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus, commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat dolor repellendus ratione in.
@@ -92,7 +124,7 @@
     </div>
   </div>
 
-  <section class="section section-dark">
+  <section id="connect"  class="section section-dark">
     <h2>Section Three</h2>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus, commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat dolor repellendus ratione in.

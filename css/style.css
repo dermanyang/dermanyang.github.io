@@ -9,7 +9,7 @@ body, html {
 }
 
 .pimg1, .pimg2, .pimg3{
-  z-index: 0;
+  /* z-index: 0; */
   position:relative;
   opacity: 0.7;
   /* background: rgba(0,0,0,0.7); */
@@ -36,6 +36,8 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 1;
+
 }
 
 
@@ -49,11 +51,52 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
   min-height:400px;
 }
 
+
+ul {
+    font-family:"Lato", sans-serif;
+    z-index: 1;
+ position: fixed; top: 0;
+   width: 100%;
+  list-style-type: none;
+  /* margin: 5vh; */
+  padding: 5vh;
+  /* overflow: hidden; */
+}
+
+li {
+    float: right;
+    /* background-color: rgba(255, 255, 255, 1.0); */
+}
+
+li a {
+    color:#000;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+    display: block;
+    padding: 8px;
+
+    /* background-color: #dddddd; */
+}
+li a:hover {
+    text-decoration: none;
+    background-color: #555;
+    color: white;
+}
+portraitWrapper{
+  position: absolute;
+  z-index: 2;
+  width:100%;
+  height: 100%;
+}
+
 .portrait {
-  z-index: 1;
+  /* position:absolute; */
+  width:100%;
+  height: 100%;
     /* Add shadows to create the "card" effect */
-    background-color: rgba(0, 0, 0, 1.0);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+    /* background-color: rgba(0, 0, 0, 1.0);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8); */
     transition: 0.3s;
     width:350px;
     height: 350px;
@@ -64,7 +107,7 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
 
 .portrait > img {
 
-    z-index: 1;
+
   /* display: block; */
   height: inherit;
   width: inherit;
@@ -76,7 +119,7 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
 }
 
 .portraitSection {
-    z-index: 1;
+    /* z-index: 1; */
   display: flex;
   justify-content: center;
 }
@@ -140,7 +183,7 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
 
 .opaqueBackground{
   background-color: rgba(255, 255, 255, 0.3);
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .textFloat{
@@ -192,6 +235,7 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
 /* CARD STYLING */
 .cardHolder {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 5vh;
   margin-bottom: 2vh;
