@@ -8,10 +8,10 @@ body, html {
   color:#003366;
 }
 
-.pimg1, .pimg2, .pimg3{
+.pimg1, .pimg2, .pimg3, .pimg4{
   /* z-index: 0; */
   position:relative;
-  opacity: 0.6;
+  opacity: 0.7;
   /* background: rgba(0,0,0,0.7); */
   background-position:center;
   background-size:cover;
@@ -43,13 +43,66 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
 .pimg2{
   background-image:url('../img/image2.jpg');
   min-height:400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .pimg3{
   background-image:url('../img/image3.jpg');
   min-height:400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.pimg4{
+  background-image:url('../img/bio.jpg');
+  /* background: white; */
+  min-height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 
+.bioRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+
+.bioImage {
+  margin: 1vh;
+  /* height: 30vh;
+  width: 30vh; */
+}
+.bioImage > img{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  height: 30vh;
+  width: 30vh;
+}
+.iconHolder {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.iconWrapper  {
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+  background: rgb(198, 235, 198);
+  margin: 1.5vh;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 ul {
     font-family:"Lato", sans-serif;
@@ -60,10 +113,12 @@ ul {
   /* margin: 5vh; */
   padding: 5vh;
   /* overflow: hidden; */
+    text-decoration: none;
 }
 
 li {
     float: right;
+      text-decoration: none;
     /* background-color: rgba(255, 255, 255, 1.0); */
 }
 
@@ -84,6 +139,32 @@ li a:hover {
     background-color: #555;
     color: white;
 }
+
+.bioRight {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  width:50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bioLeft  {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  width:50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+
+
 
 .portraitWrapper{
   position: absolute;
@@ -107,9 +188,8 @@ li a:hover {
 }
 
 
+
 .portrait > img {
-
-
   /* display: block; */
   height: inherit;
   width: inherit;
@@ -156,20 +236,36 @@ li a:hover {
   padding-bottom:5vh;
 }
 
+.para {
+  margin-top: 2.5vh;
+  margin-left: 15vw;
+  margin-right:15vw;
+}
+
 .title  {
     font-size:30px;
     /* letter-spacing:5px; */
+}
+
+.shortLine  {
+  padding-top: 1vh;
+  margin: auto;
+  border-bottom: 3px rgb(198, 235, 198) solid;
+  max-width: 50px;
+  justify-content: center;
 }
 
 
 
 .titlePic{
   text-transform:uppercase;
-  padding-top: 5vh;
+  position:absolute;
+  top:2.5vh;
+  /* margin: auto; */
   /* position:absolute; */
   width:100%;
   text-align:center;
-  color:#000;
+  /* color:#000; */
   font-size:27px;
   letter-spacing:8px;
 }
@@ -185,7 +281,7 @@ li a:hover {
 
 .opaqueBackground{
   /* background-color: rgba(255, 255, 255, 0.3); */
-  background-color: rgba(198, 235, 198, 0.8);
+  background-color: rgba(198, 235, 198, 0.5);
 )
   /* z-index: -1; */
 }
@@ -201,10 +297,15 @@ li a:hover {
   letter-spacing:8px;
 }
 
+.bgOpacity  {
+  background: rgba(0,0,0,0.5);
+}
+
 
 
 .ptext .border{
   background-color:#111;
+  /* opacity: 0.7; */
   color:#fff;
   padding:2vh;
   margin: 20px;
@@ -241,22 +342,28 @@ li a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 5vh;
-  margin-bottom: 2vh;
+  margin: auto;
+  /* margin-bottom: 2vh; */
+
 }
 
 .orgcontainer {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  margin-top: 10vh;
+  /* margin-top: 10vh; */
   margin-bottom: 2vh;
+}
+
+.orgcontainer a {
+  /* margin: auto; */
 }
 
 .card {
     /* Add shadows to create the "card" effect */
     /* animation: scale-in-center 0.4s; */
     /* animation-name:fopa scale-up-ver-center; */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
     transition: 0.3s;
     width: 40vh;
     margin: 2.5vw;
@@ -281,7 +388,7 @@ li a:hover {
     box-shadow: 0 4px 8px 0;
     transition: 0.3s;
     width: 50vh;
-    margin: 5vw;
+    margin: 2.5vw 5vw 2.5vw 5vw;
 }
 
 .projectCard a:hover{
@@ -353,6 +460,24 @@ li a:hover {
 /* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.bioText  {
+    margin: 1.5vh;
+}
+
+.bioCard  {
+  text-decoration: none;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255,255,255,0.6);
+  box-shadow: 0 4px 8px 0;
+  transition: 0.3s;
+  width: 50vh;
+  margin: 1.5vh;
 }
 
 
