@@ -1,7 +1,10 @@
 
 
 window.addEventListener("load", function()  {
-    document.getElementById("overlay").remove();
+    var element = document.getElementById("overlay");
+    element.classList.add("slide-out-top");
+    // element.remove();
+    // document.getElementById("overlay").remove();
 })
 
 
