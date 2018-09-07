@@ -1,6 +1,6 @@
 
 
-window.addEventListener("DOMContentLoaded", function()  {
+window.addEventListener("load", function()  {
     document.getElementById("overlay").remove();
 })
 
