@@ -528,8 +528,11 @@ li a:hover {
   background-color: rgba(255,255,255,0.6);
   box-shadow: 0 4px 8px 0;
   transition: 0.3s;
-  width: 50vh;
+  width: auto;
+  min-width: 30vh;
+  max-width: 70vh;
   margin: 1.5vh;
+  min-height: 30px;
 }
 
 
