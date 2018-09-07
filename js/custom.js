@@ -1,3 +1,11 @@
+
+
+window.addEventListener("DOMContentLoaded", function()  {
+    document.getElementById("overlay").remove();
+})
+
+
+
 $(document).ready(function() {
   $('#main-nav li a').click(function(e) {
 

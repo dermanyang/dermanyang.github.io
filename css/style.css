@@ -24,6 +24,43 @@ body, html {
   background-attachment:fixed;
 }
 
+#overlay  {
+height:100%;
+width: 100%;
+background: rgba(0,0,0,1);
+position: fixed;
+left: 0;
+top: 0;
+z-index: 3;
+}
+.spinner{
+    width: 80px;
+    height: 80px;
+
+    border: 2px solid #f3f3f3;
+    border-top:3px solid #f25a41;
+    border-radius: 100%;
+
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+
+
 #org1 {
 background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480fe1a/t/56a19ab71a5203cff0c1fe29/1534307982804/?format=1500w');
 }
@@ -67,6 +104,20 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
   z-index: 1;
 }
 
+.loading {
+  max-width: 50%;
+  line-height: 1.4;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.loading__author {
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: rgba(189,189,189 ,1);
+  margin: 0.6rem 0 2rem 0;
+  display: block;
+}
 .bioRow {
     display: flex;
     flex-direction: row;
