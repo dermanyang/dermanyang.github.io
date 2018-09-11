@@ -180,6 +180,14 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
   align-items: center;
 }
 
+.card:hover .iconWrapper {
+background-color: white;
+}
+
+.card:hover i {
+  color: #666666
+}
+
 ul {
     font-family:"Lato", sans-serif;
     z-index: 3;
@@ -505,6 +513,9 @@ li a:hover {
     /* animation: scale-in-center 0.4s; */
     /* animation-name:fopa scale-up-ver-center; */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     transition: 0.3s;
     width: 40vh;
     margin: 2.5vw;
