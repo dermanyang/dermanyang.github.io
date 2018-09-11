@@ -12,10 +12,12 @@ body, html {
   /* z-index: 0; */
   position:relative;
   opacity: 0.7;
+
   /* background: rgba(0,0,0,0.7); */
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
+
 
   /*
     fixed = parallax
@@ -28,6 +30,7 @@ body, html {
 height:100%;
 width: 100%;
 background: rgba(198, 235, 198,1);
+/* background: rgb(255,255,255, 1) */
 position: fixed;
 left: 0;
 top: 0;
@@ -85,8 +88,11 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
   background-image:url('../img/image2.jpg');
   min-height:400px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 1;
 }
 
 .pimg3{
@@ -97,13 +103,15 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
   justify-content: center;
   align-content: center;
 }
-.pimg4{
+
+.pimg4 {
   background-image:url('../img/bio.jpg');
   /* background: white; */
   min-height:100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
   z-index: 1;
 }
@@ -127,17 +135,30 @@ background-image:url('http://static1.squarespace.com/static/566c37f2a976afcb5480
     flex-direction: row;
     justify-content: center;
     margin: auto;
+    flex-wrap: wrap;
 }
 
+@media screen and (max-width: 992px)  {
+    .bioImage {
+      display: none;
+    }
+}
 .bioImage {
   margin: 1vh;
   /* height: 30vh;
   width: 30vh; */
 }
+
+@media screen and (max-width: 992px)  {
+    .bioImage > img {
+      display: none;
+    }
+}
+
 .bioImage > img{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
-  height: 30vh;
-  width: 30vh;
+  height: 26vh;
+  width: 26vh;
 }
 .iconHolder {
   display: flex;
@@ -195,24 +216,30 @@ li a:hover {
     color: white;
 }
 
+@media screen and (max-width: 992px)  {
+    .bioRight {
+      display: none;
+    }
+}
+
 .bioRight {
-  position: absolute;
-  right: 0;
+  /* position: absolute; */
   z-index: 2;
-  width:50%;
-  height: 100%;
+  /* width:50%; */
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .bioLeft  {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  /* position: absolute; */
+  /* left: 0; */
+  /* bottom: 0; */
   z-index: 2;
-  width:50%;
-  height: 100%;
+  /* width:50%; */
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -238,13 +265,28 @@ li a:hover {
     /* Add shadows to create the "card" effect */
     /* background-color: rgba(0, 0, 0, 1.0);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8); */
-    transition: 0.3s;
-    width: 27vw;
-    height: 27vw;
-    border-radius: 50%;
-    margin: 30px;
+  transition: 0.3s;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  margin: 30px;
 }
 
+@media screen and (max-width: 992px) {
+  .portrait {
+    /* position:absolute; */
+    width:100%;
+    height: 100%;
+      /* Add shadows to create the "card" effect */
+      /* background-color: rgba(0, 0, 0, 1.0);
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8); */
+    transition: 0.3s;
+    width: 80vw;
+    height: 80vw;
+    border-radius: 50%;
+    margin: 30px;
+  }
+}
 
 
 .portrait > img {
@@ -279,6 +321,18 @@ li a:hover {
   color:#ddd;
 }
 
+@media screen and (max-width: 992px)  {
+    .ptext  {
+      align-content: center;
+      text-align:center;
+      color:#003366;
+      font-size:2vh !important;
+      letter-spacing:8px;
+      text-transform:uppercase;
+      padding-bottom:5vh;
+    }
+}
+
 .ptext{
   /* position:absolute; */
   /* top:50%;
@@ -295,9 +349,13 @@ li a:hover {
 }
 
 .para {
+  /* margin-left: 15vw;
+  margin-right:15vw; */
+  margin: auto;
   margin-top: 2.5vh;
-  margin-left: 15vw;
-  margin-right:15vw;
+  /* width: 80vw; */
+  min-width: 200px;
+  max-width: 800px;
 }
 
 .title  {
@@ -306,8 +364,11 @@ li a:hover {
 }
 
 .shortLine  {
-  padding-top: 1vh;
-  margin: auto;
+  /* padding-top: 1vh; */
+  margin-top: 1vh;
+  margin-bottom:1vh;
+  margin-left: auto;
+  margin-right: auto;
   border-bottom: 3px rgb(198, 235, 198) solid;
   max-width: 50px;
   justify-content: center;
@@ -327,13 +388,27 @@ li a:hover {
   font-size:27px;
   letter-spacing:8px;
 }
+
+
+@media screen and (max-width: 992px)  {
+  .text{
+    padding-top: 5vh;
+    /* position:absolute; */
+    width:100%;
+    text-align:center;
+    color:#003366;
+    font-size:1.4vh !important;
+    letter-spacing:8px;
+  }
+}
+
 .text{
   padding-top: 5vh;
   /* position:absolute; */
   width:100%;
   text-align:center;
   color:#003366;
-  font-size:1.2vw;
+  font-size:1.4vw;
   letter-spacing:8px;
 }
 
@@ -372,7 +447,7 @@ li a:hover {
   background-color:#111;
   /* opacity: 0.7; */
   color:#fff;
-  padding:2vh;
+  padding:2.5vh;
   margin: 20px;
   /* background-color: rgba(0, 0, 0, 0.7); */
   /* background-color: rgba(6.7, 6.7, 6.7, 0.7); */
@@ -416,6 +491,7 @@ li a:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap:wrap;
   /* margin-top: 10vh; */
   margin-bottom: 2vh;
 }
@@ -444,6 +520,18 @@ li a:hover {
   flex-direction: column;
 }
 
+@media screen and (max-width: 992px) {
+  .projectCard  {
+    text-decoration: none;
+    align-content: center;
+    text-align: center;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0 4px 8px 0;
+    transition: 0.3s;
+    width: 80vw !important;
+    margin: 2.5vw 5vw 2.5vw 5vw;
+  }
+}
 
 .projectCard {
     text-decoration: none;
@@ -471,6 +559,22 @@ li a:hover {
   color: black;
 }
 
+@media screen and (max-width: 992px)  {
+  .akpCard {
+      /* Add shadows to create the "card" effect */
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+      transition: 0.3s;
+      width: 80vw !important;
+      height:30.18vw !important;
+
+      /* border-radius: 50%; */
+      /* margin-left: 2.5vw;
+      margin-right: 2.5vw; */
+      margin: 2.5vw;
+  }
+}
 
 
 .akpCard {
@@ -479,12 +583,13 @@ li a:hover {
     justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
     transition: 0.3s;
-    width: 28.97vw;
-    height: 11vw;
+    width: 345px;
+    height: 130.4px;
 
     /* border-radius: 50%; */
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
+    /* margin-left: 2.5vw;
+    margin-right: 2.5vw; */
+    margin: 2.5vw;
 }
 
 .akpCard > img {
@@ -498,17 +603,33 @@ li a:hover {
   /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
 }
 
+@media screen and (max-width: 992px)  {
+  .lxaCard {
+      /* Add shadows to create the "card" effect */
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+      transition: 0.3s;
+      width: 80vw !important;
+      height:30.18vw !important;
+      /* border-radius: 50%; */
+      /* margin-left: 2.5vw;
+      margin-right: 2.5vw; */
+      margin: 2.5vw;
+  }
+}
+
+
 .lxaCard {
     /* Add shadows to create the "card" effect */
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
     transition: 0.3s;
-    width: 27.98vw;
-    height: 11vw;
+    width: 345px;
+    height: 130.4px;
     /* border-radius: 50%; */
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
+    margin: 2.5vw;
 }
 
 .lxaCard > img {
@@ -543,7 +664,7 @@ li a:hover {
   transition: 0.3s;
   width: auto;
   min-width: 30vh;
-  max-width: 70vh;
+  max-width: 50vh;
   margin: 1.5vh;
   min-height: 30px;
 }
@@ -726,5 +847,43 @@ li a:hover {
     -webkit-transform: translateY(-1000px);
             transform: translateY(-1000px);
     opacity: 0;
+  }
+}
+.slide-in-fwd-center {
+	-webkit-animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2018-9-10 23:41:6
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-fwd-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+            transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+            transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
   }
 }
