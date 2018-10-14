@@ -3,6 +3,12 @@
 window.addEventListener("load", function()  {
     var element = document.getElementById("overlay");
     element.classList.add("slide-out-top");
+
+    var element = document.getElementById("loadingScreenText");
+    element.classList.add("slide-out-top");
+
+    var element = document.getElementById("name");
+    element.classList.add("slide-in-bottom");
     // element.remove();
     // document.getElementById("overlay").remove();
 })

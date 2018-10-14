@@ -64,6 +64,26 @@ flex-direction: column;
 justify-content: center;
 }
 
+# loadingScreenText {
+  top: 30vh;
+  position: absolute;
+  font-size:32px;
+  font-family:"Lato", sans-serif;
+  font-weight:400;
+  line-height:1.8em;
+  color: rgba(198, 235, 198,1);
+}
+
+.loadingScreenText {
+  top: 30vh;
+  position: absolute;
+  font-size:32px;
+  font-family:"Lato", sans-serif;
+  font-weight:400;
+  line-height:1.8em;
+  color: rgba(198, 235, 198,1);
+}
+
 .spinner{
     width: 80px;
     height: 80px;
