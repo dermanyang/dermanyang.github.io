@@ -26,6 +26,28 @@ body, html {
   background-attachment:fixed;
 }
 
+.textOverlay  {
+  /* position: relative; */
+  margin: auto;
+  height: inherit;
+  width: inherit;
+  opacity: 1;
+}
+
+
+.orgText {
+  color: white;
+  font-size: 20px;
+  /* position: absolute; */
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
 #overlay  {
 height:100%;
 width: 100%;
@@ -571,9 +593,100 @@ li a:hover {
 }
 
 @media screen and (max-width: 992px)  {
+  .acmCard {
+      /* Add shadows to create the "card" effect */
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+      transition: 0.3s;
+      width: 60.43vw !important;
+      height:30.18vw !important;
+
+      /* border-radius: 50%; */
+      /* margin-left: 2.5vw;
+      margin-right: 2.5vw; */
+      margin: 2.5vw;
+  }
+}
+
+
+.acmCard {
+    /* Add shadows to create the "card" effect */
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    transition: 0.3s;
+    width: 282.7px;
+    height: 130.4px;
+
+    /* border-radius: 50%; */
+    /* margin-left: 2.5vw;
+    margin-right: 2.5vw; */
+    margin: 2.5vw;
+}
+
+.acmCard > img {
+  height: inherit;
+  width: inherit;
+}
+
+/* On mouse-over, add a deeper shadow */
+.acmCard:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
+}
+
+
+@media screen and (max-width: 992px)  {
+  .sharpeCard {
+      /* Add shadows to create the "card" effect */
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+      transition: 0.3s;
+      width: 60.43vw !important;
+      height:30.18vw !important;
+
+      /* border-radius: 50%; */
+      /* margin-left: 2.5vw;
+      margin-right: 2.5vw; */
+      margin: 2.5vw;
+  }
+}
+
+
+.sharpeCard {
+    /* Add shadows to create the "card" effect */
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    transition: 0.3s;
+    width: 282.7px;
+    height: 130.4px;
+
+    /* border-radius: 50%; */
+    /* margin-left: 2.5vw;
+    margin-right: 2.5vw; */
+    margin: 2.5vw;
+}
+
+.sharpeCard > img {
+  height: inherit;
+  width: inherit;
+}
+
+/* On mouse-over, add a deeper shadow */
+.sharpeCard:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
+}
+
+
+
+@media screen and (max-width: 992px)  {
   .akpCard {
       /* Add shadows to create the "card" effect */
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.7);
       justify-content: center;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
       transition: 0.3s;
@@ -590,7 +703,7 @@ li a:hover {
 
 .akpCard {
     /* Add shadows to create the "card" effect */
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
     transition: 0.3s;
@@ -608,16 +721,21 @@ li a:hover {
   width: inherit;
 }
 
+.test {
+  opacity: 0;
+}
+
 /* On mouse-over, add a deeper shadow */
 .akpCard:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
 }
+
 
 @media screen and (max-width: 992px)  {
   .lxaCard {
       /* Add shadows to create the "card" effect */
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.7);
       justify-content: center;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
       transition: 0.3s;
@@ -633,7 +751,7 @@ li a:hover {
 
 .lxaCard {
     /* Add shadows to create the "card" effect */
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
     transition: 0.3s;
@@ -650,7 +768,7 @@ li a:hover {
 
 /* On mouse-over, add a deeper shadow */
 .lxaCard:hover {
-  background-color: rgba(0, 0, 0, 0.7);s
+  background-color: rgba(0, 0, 0, 0.9);s
   /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
 }
 
